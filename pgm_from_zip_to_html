@@ -1,0 +1,21 @@
+# old version for pgm images in zip file;
+# res_img = "-"
+# if os.path.exists(path_to_img):
+#     with ZipFile(path_to_img, 'r') as z_file:
+#         im_list = [img for img in z_file.namelist() if
+#                    img.endswith(extension)]
+#         frame_number = len(im_list) // 2
+#
+#         data = z_file.read(im_list[frame_number])
+#         im = cv2.imdecode(np.frombuffer(data, np.uint8), 1)
+#
+#         if im is not None:
+#             _is_success, im_buf_arr = cv2.imencode(".png", im)
+#             ext = path_to_img.split('.')[-1]
+#             prefix = 'data:image/{};base64,'.format(ext)
+#             img_str = prefix + base64.b64encode(im_buf_arr).decode(
+#                 'utf-8')
+#             res_img = \
+#                 '<img src="' + img_str + \
+#                 '" alt="thumbnail" style="width:30%;height:30%;">'
+##################################
